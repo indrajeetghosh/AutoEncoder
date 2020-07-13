@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import pandas as pd
 import scipy.io as sio
 import numpy as np
@@ -20,15 +17,13 @@ from torch.autograd import Variable as V
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
 import torchvision
-seed = 42
 from torchvision import transforms
 import torch
 from torch.nn import Linear, ReLU, CrossEntropyLoss, Sequential, Conv1d, MaxPool1d, Module, Softmax, BatchNorm1d, Dropout
 from torch.optim import Adam, SGD
 
-
 # Your Dataset - train and validation
-trn_x,val_x,trn_y,val_y = train_test_split(X,y,test_size=0.30)
+trn_x,val_x,trn_y,val_y = train_test_split(X,y,test_size=0.30, random_state=3)
 
 #Converting to tensor 
 trn_x_torch = torch.from_numpy(trn_x).type(torch.FloatTensor)
@@ -110,8 +105,6 @@ for epoch in range(epochs):
     # display the epoch training loss
     print("epoch : {}/{}, recon loss = {:.8f}".format(epoch + 1, epochs, loss))
 
-
-# In[ ]:
 
 
 
