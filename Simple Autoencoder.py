@@ -16,9 +16,8 @@ import torch.nn as nn
 from torch.autograd import Variable as V
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
-import torchvision
+#import torchvision
 from torchvision import transforms
-import torch
 from torch.nn import Linear, ReLU, CrossEntropyLoss, Sequential, Conv1d, MaxPool1d, Module, Softmax, BatchNorm1d, Dropout
 from torch.optim import Adam, SGD
 
